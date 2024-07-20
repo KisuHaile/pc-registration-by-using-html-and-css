@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, purple, blue);
+    margin: 0;
+    padding: 0;
+}
+.container1{
+    margin: 150px 20px 20px 20px;
+    text-align: center;
+
+}
+.container1 h1{
+    color: whitesmoke;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+}
+.box{
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    animation-iteration-count: infinite;
+    animation-name: animation;
+}
+.box a{
+    text-decoration: none;
+    color: aliceblue;
+}
+.box a:hover{
+    color: burlywood;
+}
+.choice{
+    border: 1px solid whitesmoke;
+    border-radius: 20px;
+    width:20vw;
+    text-align: center;
+}
+/* Keyframes for movement and color change */
+@keyframes moveAndChangeColor {
+    0% {
+        transform: translate(0, 0);
+        background-color: rgb(206, 68, 246);
+
+    }
+    50% {
+        transform: translate(20px, 0px);
+        background-color: rgb(66, 48, 226);
+    }
+    100% {
+        transform: translate(0, 0);
+        background-color: rgb(206, 68,246);
+    }
+}
+
+/* Apply animation to choice class */
+.choice {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.5s;
+    animation: moveAndChangeColor 5s infinite;
+    margin: 20px;
+}
+
+/* Additional styles to enhance visibility */
+.choice a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}

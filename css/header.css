@@ -1,0 +1,69 @@
+header {
+    width: 100hw;
+    height: auto;
+    color: #fff;
+}
+
+nav.bar {
+
+    background: linear-gradient(to right, rgb(35, 35, 39), blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom-left-radius: 20px;
+
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.logo img {
+    max-width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.info ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.info ul li {
+    margin-left: 20px;
+}
+
+.info ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.info ul li a:hover {
+    background-color: #575757;
+}
+
+.aboutDBU {
+    padding: 20px;
+    text-align: center;
+}
+
+.aboutDBU h1 {
+    font-size: 2em;
+    color: #333;
+}

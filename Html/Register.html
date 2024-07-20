@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Registration</title>
+    <link rel="stylesheet" href="./../css/header.css">
+    <link rel="stylesheet" href="./../css/footer.css">
+    <link rel="stylesheet" href="./../css/Register.css">
+    <script src="./../js/registred.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="bar">
+            <div class="container">
+                <div class="logo">
+                    <img src="./../Image/_94d87cb4-1cd0-43b5-9439-98fe2a898e73.jfif" alt="DBU logo" class="logo-image">
+                </div>
+                <div class="info">
+                    <ul>
+                        <li><a href="Home.html">Home</a></li>
+                        <li><a href="Register.html">Register</a></li>
+                        <li><a href="registred.html">Registred Pc</a></li>
+                        <li><a href="About.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container1">
+            <h1>Debre Birhan University</h1>
+            <h2>PC Registration Form</h2>
+            <form action="/submit_registration" method="post">
+                <div class="form-group">
+                    <label for="student-name">Student Name</label>
+                    <input type="text" id="student-name" name="pc-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="Id">Student Id</label>
+                    <input type="text" id="Id" name="Id" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone number">Student Phone number</label>
+                    <input type="text" id="phone number" name="phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">PC name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="serial">PC Serial</label>
+                    <input type="text" id="serial" name="serial" required>
+                </div>
+                <div class="form-group">
+                    <label for="gpu">PC Model</label>
+                    <input type="text" id="Model" name="Model" required>
+                </div>
+                <div class="form-group">
+                    <label for="additional-info">Additional Information:</label>
+                    <textarea id="additional-info" name="additional-info"></textarea>
+                </div>
+                <button type="submit">Register PC</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="foot-cont">
+            <p>&copy; 2024 Debre Birhan University. All rights reserved.</p>
+            <p><a href="contact.html">Contact Us</a></p>
+        </div>
+    </footer>
+</body>
+</html>

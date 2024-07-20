@@ -1,0 +1,30 @@
+footer {
+    background: linear-gradient(to right, purple, rgb(32, 32, 34));
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: absolute;
+    top: auto;
+    width: 100%;
+    border-top-right-radius: 20px;
+}
+
+.foot-cont {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.foot-cont p {
+    margin: 5px 0;
+}
+
+.foot-cont a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.foot-cont a:hover {
+    text-decoration: none;
+    color: bisque;
+}
