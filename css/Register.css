@@ -52,17 +52,19 @@ textarea {
     resize: vertical;
 }
 
-button[type="submit"] {
-    width: 100%;
+button[type="submit"],
+button[type="reset"] {
+    width: 30%;
     padding: 10px;
-    background-color: blueviolet;
+    margin: 0 0 0 80px;
+    background-color: rgb(183, 125, 238);
     color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 20px;
     cursor: pointer;
     font-size: 16px;
 }
 
-button[type="submit"]:hover {
+button:hover {
     background-color: darkblue;
 }

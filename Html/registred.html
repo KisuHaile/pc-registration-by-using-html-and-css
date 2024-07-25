@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./../css/header.css">
     <link rel="stylesheet" href="./../css/footer.css">
     <link rel="stylesheet" href="./../css/registred.css">
-    <script src="./../js/registered.js" defer></script>
+    <script src="./../js/registred.js" defer></script>
 </head>
 <body>
     <header>
@@ -20,49 +20,71 @@
                     <ul>
                         <li><a href="Home.html">Home</a></li>
                         <li><a href="Register.html">Register</a></li>
-                        <li><a href="registred.html">Registred Pc</a></li>
+                        <li><a href="registred.html">Registred PC</a></li>
                         <li><a href="About.html">About Us</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-
     </header>
     <main>
         <div class="table-container">
             <table>
                 <thead>
                     <tr>
-                        <th>PC Name</th>
                         <th>Student Name</th>
                         <th>Student ID</th>
                         <th>Phone Number</th>
+                        <th>PC Name</th>
                         <th>PC Serial</th>
                         <th>PC Model</th>
                         <th>Additional Info</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                
+                <tbody id="user-table">
+                    <!-- the added info will append here -->
                 </tbody>
             </table>
         </div>
-    </main> 
+        <button class="button"><a href="Register.html">Register</a><button>
+    </main>
     <footer>
         <div class="foot-cont">
             <p>&copy; 2024 Debre Birhan University. All rights reserved.</p>
             <p><a href="contact.html">Contact Us</a></p>
         </div>
     </footer>
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var existingUsers = JSON.parse(localStorage.getItem('users')) || [];
+            var userTable = document.getElementById('user-table');
+
+            if (existingUsers.length > 0) {
+                existingUsers.forEach(function(userData, index) {
+                    var tableRow = document.createElement('tr');
+                    tableRow.innerHTML = `
+                        <td>${userData.student_name}</td>
+                        <td>${userData.student_Id}</td>
+                        <td>${userData.phone_number}</td>
+                        <td>${userData.Pc_name}</td>
+                        <td>${userData.Pc_serial}</td>
+                        <td>${userData.Pc_model}</td>
+                        <td>${userData.additional_info}</td>
+                        <td><button onclick="deleteUser(${index})">Delete</button></td>
+                    `;
+                    userTable.appendChild(tableRow);
+                });
+            }
+        });
+
+        function deleteUser(index) {
+            var existingUsers = JSON.parse(localStorage.getItem('users')) || [];
+            existingUsers.splice(index, 1);
+            localStorage.setItem('users', JSON.stringify(existingUsers));
+            window.location.reload(); // Reload the page to reflect changes
+        }
+    </script> -->
 </body>
 </html>
