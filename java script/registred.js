@@ -1,28 +1,38 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var existingUsers = JSON.parse(localStorage.getItem('users')) || [];
-    var userTable = document.getElementById('user-table');
+document.addEventListener("DOMContentLoaded", function () {
+    
+    var pcList = JSON.parse(localStorage.getItem('pcList')) || [];
+    
+    var tbody = document.getElementById('user-table');
 
-    if (existingUsers.length > 0) {
-        existingUsers.forEach(function(userData, index) {
-            var tableRow = document.createElement('tr');
-            tableRow.innerHTML = `
-                <td>${userData.student_name}</td>
-                <td>${userData.student_Id}</td>
-                <td>${userData.phone_number}</td>
-                <td>${userData.Pc_name}</td>
-                <td>${userData.Pc_serial}</td>
-                <td>${userData.Pc_model}</td>
-                <td>${userData.additional_info}</td>
-                <td><button onclick="deleteUser(${index})">Delete</button></td>
-            `;
-            userTable.appendChild(tableRow);
-        });
-    }
+    pcList.forEach(function (item, index) {
+        var row = tbody.insertRow();
+
+        row.insertCell().innerHTML = item.name;
+        row.insertCell().innerHTML = item.Id;
+        row.insertCell().innerHTML = item.phone_number;
+        row.insertCell().innerHTML = item.Pc_name;
+        row.insertCell().innerHTML = item.Pc_serial; // Ensure this matches register.js
+        row.insertCell().innerHTML = item.Pc_model;
+        row.insertCell().innerHTML = item.Pc_owned;
+        row.insertCell().innerHTML = item.Pc_type;
+        row.insertCell().innerHTML = item.additional_info;
+        
+        var deleteBtn = document.createElement("button");
+        deleteBtn.textContent = "Delete";
+        deleteBtn.onclick = function () {
+            deleteEntry(index);
+        };
+        var cell = row.insertCell();
+        cell.appendChild(deleteBtn);
+    });
 });
 
-function deleteUser(index) {
-    var existingUsers = JSON.parse(localStorage.getItem('users')) || [];
-    existingUsers.splice(index, 1);
-    localStorage.setItem('users', JSON.stringify(existingUsers));
-    window.location.reload(); // Reload the page to reflect changes
+function deleteEntry(index) {
+    var pcList = JSON.parse(localStorage.getItem('pcList')) || [];
+
+    pcList.splice(index, 1);
+
+    localStorage.setItem('pcList', JSON.stringify(pcList));
+
+    location.reload(); 
 }

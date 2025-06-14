@@ -3,33 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Debre Birhan University</title>
+    <title>Contact us</title>
     <link rel="stylesheet" href="./../css/header.css">
     <link rel="stylesheet" href="./../css/footer.css">
     <link rel="stylesheet" href="./../css/contact.css">
 </head>
 <body>
     <header>
-        <nav class="bar">
-            <div class="container">
-                <div class="logo">
-                    <img src="./../Image/_94d87cb4-1cd0-43b5-9439-98fe2a898e73.jfif" alt="DBU logo" class="logo-image">
-                </div>
-                <div class="info">
-                    <ul>
-                        <li><a href="Home.html">Home</a></li>
-                        <li><a href="Register.html">Register</a></li>
-                        <li><a href="registred.html">Registred Pc</a></li>
-                        <li><a href="About.html">About Us</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-    </header>
-    <main>
-        <div class="container_1">
+    <div class="container">
+      <a href="Home.html" class="logo">Pc<span> Control</span></a>
+      <nav>
+        <ul>
+          <li><a href="Register.html">Register</a></li>
+          <li><a href="registred.html">Registered PCs</a></li>
+          <li><a href="Home.html">Log out</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+    <main class="blur">
+      <div class="container_1">
             <div class="contact">
                 <h1>Contact Us</h1>
                 <p>We are here to assist you with any questions or concerns you may have about the PC registration process. Please feel free to reach out to us through any of the following methods:</p>
@@ -37,12 +30,13 @@
             <div class="contact_1">
                 <div class="email">
                     <h2>Email</h2>
-                    <p>For general inquiries and support, email us at: <a href="mailto:support@dbu.edu">support@dbu.edu</a></p>
+                    <p>For general inquiries and support, email us at: <a href="mailto:Group@dbu.edu">Group@dbu.edu</a></p>
                 </div>
     
                 <div class="phone">
                     <h2>Phone</h2>
-                    <p>You can call us at: +251-90-000-0000 </p>
+                    <pre>You can call us at:
++251-90-000-0000 </pre>
                 </div>
                 
                 <div class="address">
@@ -52,43 +46,53 @@
                 
                 <div class="working_hours">
                     <h2>Office Hours</h2>
-                    <p>Monday - Friday: 8:00 AM - 5:00 PM<br>Saturday - Sunday: Closed</p>
-                </div>
-                
-                <div class="follow_us">
-                    <h2>Follow Us</h2>
-                    <p>Stay connected with us through our social media channels:</p>
-                    <ul class="social-media">
-                        <li><a href="https://www.facebook.com/dbu.edu.et/">Facebook</a></li>
-                        <li><a href="https://t.me/s/DBU11?before=1136">Telegram</a></li>
-                    </ul>
+                    <p>Monday-Friday: 8:00AM-5:00PM<br>Saturday - Sunday: Closed</p>
                 </div>
             </div>
         </div>
-        <div class="form">
-            <h2>Contact Form</h2>
-            <form action="/submit_contact" method="post">
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Your Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
     </main>
-    <footer>
-        <div class="foot-cont">
-            <p>&copy; 2024 Debre Birhan University. All rights reserved.</p>
-            <p><a href="contact.html">Contact Us</a></p>
+    <footer class="footer">
+    <div class="container">
+      
+      <div class="contact-info">
+        <p><strong>Register once, store them for all the time</strong></p>
+        <p>+251 90 00 000 0000</p>
+        <p>Email: Group@dbu.edu</p>
+      </div>
+      
+      </div>
+      
+
+      
+      <div class="footer-links">
+        
+        <div class="column">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="#">Support Home Page</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
         </div>
-    </footer>
+        <div class="column">
+          <h3>Company Info</h3>
+          <ul>
+            <li><a href="About.html">About Us</a></li>
+            
+          </ul>
+        </div>
+        <div class="column">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Accessibility Statement</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <div class="foot-cont">
+            <p>&copy; 2025 Debre Birhan University. All rights reserved.</p>
+        </div>
+  </footer>
 </body>
 </html>

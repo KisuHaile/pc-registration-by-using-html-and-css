@@ -6,44 +6,39 @@
     <title>PC Registration</title>
     <link rel="stylesheet" href="./../css/header.css">
     <link rel="stylesheet" href="./../css/footer.css">
-    <link rel="stylesheet" href="./../css/Register.css">
-    <script src="./../js/register.js" defer></script>
+    <link rel="stylesheet" href="./../css/register.css">
+    <script src="../java script/register.js"></script>
 </head>
 <body>
     <header>
-        <nav class="bar">
-            <div class="container">
-                <div class="logo">
-                    <img src="./../Image/_94d87cb4-1cd0-43b5-9439-98fe2a898e73.jfif" alt="DBU logo" class="logo-image">
-                </div>
-                <div class="info">
-                    <ul>
-                        <li><a href="Home.html">Home</a></li>
-                        <li><a href="Register.html">Register</a></li>
-                        <li><a href="registred.html">Registred PC</a></li>
-                        <li><a href="About.html">About Us</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <div class="container">
+      <a href="Home.html" class="logo">Pc<span> Control</span></a>
+      <nav>
+        <ul>
+          <li><a href="Register.html">Register</a></li>
+          <li><a href="registred.html">Registered PCs</a></li>
+          <li><a href="Home.html">Log out</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
     <main>
+      <div class="blur">
         <div class="container1">
-            <h1>Debre Birhan University</h1>
+            <img src="../Image/eligibility-criteria.webp" alt="form image" class="form-image">
             <h2>PC Registration Form</h2>
             <form class="form">
                 <div class="form-group">
-                    <label for="student_name">Student Name</label>
-                    <input type="text" id="student_name" name="student_name" required>
+                    <label for="student_name">Name</label>
+                    <input type="text" id="name" name="name" required autofocus>
                 </div>
                 <div class="form-group">
-                    <label for="Id">Student Id</label>
+                    <label for="Id">Identification number</label>
                     <input type="text" id="Id" name="Id" required>
                 </div>
                 <div class="form-group">
-                    <label for="phone_number">Student Phone number</label>
-                    <input type="text" id="phone_number" name="phone_number" required>
+                    <label for="phone_number">Phone number</label>
+                    <input type="text" id="phone_number" name="phone_number" required >
                 </div>
                 <div class="form-group">
                     <label for="Pc_name">PC name</label>
@@ -58,11 +53,30 @@
                     <input type="text" id="Model" name="Model" required>
                 </div>
                 <div class="form-group">
+                  <label for="role">Pc owned</label>
+                  <select id="role" name="role" required>
+                    <option value="" disabled selected>Select PC owned</option>
+                    <option value="Student">Student</option>
+                    <option value="Teacher">Teacher</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                    <label for="pc_type">PC Type:</label>
+                    <select id="pc_type" name="pc_type" required>
+                        <option value="" disabled selected>Select PC Type</option>
+                        <option value="Personal">Personal</option>
+                        <option value="University">University</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
                     <label for="additional_info">Additional Information:</label>
                     <textarea id="additional_info" name="additional_info"></textarea>
                 </div>
-                <div style="display: flex;">
-                    <button type="submit">
+
+                <div class="form-group">
+                    <button type="submit" >
                         <span>Register PC</span>
                     </button>
                     <button type="reset">
@@ -71,49 +85,51 @@
                 </div>
             </form>
         </div>
+      </div>
+        
     </main>
-    <footer>
-        <div class="foot-cont">
-            <p>&copy; 2024 Debre Birhan University. All rights reserved.</p>
-            <p><a href="contact.html">Contact Us</a></p>
+    <footer class="footer">
+    <div class="container">
+      
+      <div class="contact-info">
+        <p><strong>Register once, store them for all the time</strong></p>
+        <p>+251 90 00 000 0000</p>
+        <p>Email: Group@dbu.edu</p>
+      </div>
+      
+      </div>
+      
+
+      
+      <div class="footer-links">
+        
+        <div class="column">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="#">Support Home Page</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
         </div>
-    </footer>
-    <!-- <script>
-        document.querySelector('.form').addEventListener('submit', function(event) {
-            event.preventDefault();
+        <div class="column">
+          <h3>Company Info</h3>
+          <ul>
+            <li><a href="About.html">About Us</a></li>
+            
+          </ul>
+        </div>
+        <div class="column">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Accessibility Statement</a></li>
+          </ul>
+        </div>
+      </div>
 
-            // Getting the information values
-            var name = document.getElementById('student_name').value;
-            var Id = document.getElementById('Id').value;
-            var phone_number = document.getElementById('phone_number').value;
-            var Pc_name = document.getElementById('Pc_name').value;
-            var serial = document.getElementById('serial').value;
-            var model = document.getElementById('Model').value;
-            var additional_info = document.getElementById('additional_info').value;
-
-            // Creating JavaScript object
-            var userData = {
-                student_name: name,
-                student_Id: Id,
-                phone_number: phone_number,
-                Pc_name: Pc_name,
-                Pc_serial: serial,
-                Pc_model: model,
-                additional_info: additional_info,
-            };
-
-            // Retrieve existing user data from localStorage or create an empty array
-            var existingUsers = JSON.parse(localStorage.getItem('users')) || [];
-
-            // Append the new user to the existing array
-            existingUsers.push(userData);
-
-            // Save updated user data to localStorage
-            localStorage.setItem('users', JSON.stringify(existingUsers));
-
-            // Redirect to the registered page
-            window.location.href = 'registered.html';
-        });
-    </script> -->
+    </div>
+    <div class="foot-cont">
+            <p>&copy; 2025 Debre Birhan University. All rights reserved.</p>
+        </div>
+  </footer>
 </body>
 </html>

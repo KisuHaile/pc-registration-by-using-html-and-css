@@ -6,47 +6,45 @@
   <title>Pc Registration</title>
   <link rel="stylesheet" href="../css/home.css" />
   <link rel="stylesheet" href="../css/Header.css"  />
-  <link rel="stylesheet" href="../css/footer.css" />
-  <script>
-    document.getElementById("logout-button").addEventListener("click", function () {
-      localStorage.removeItem("isLoggedIn");
-      window.location.href = "index.html"; // Adjust if your index page is in a different folder
-    });
-  </script>
-
+    <link rel="stylesheet" href="../css/footer.css" />
+    <script src="../java script/auth.js"></script>
 </head>
 <body>
-
   
   <header>
     <div class="container">
-      <a href="Home.html" class="logo">Pc<span> Control</span></a>
-      
+      <a href="#" class="logo">Pc<span> Control</span></a>
     </div>
   </header>
+ 
 
-  
   <div class="blur">
     <div class="home">
-      <section class="hero">
-        <div class="container1">
-          <h1>Welcome to Pc control</h1>
-          <p>Register once, store them for all the time</p>
-        </div>
-      </section>
-      <section class="choice">
-        <div class="re" id="re">
-          <a href="Register.html"><p>Register</p></a>
-        </div>
-        <div class="re" id="re1">
-          <a href="registred.html"><p>Registered PC</p></a>
-        </div>
-        <div class="choice logout">
-          <a href="index.html"><p>Log out</p></a>
-        </div>
-      </section>
-      
+    <section class="hero">
+    <div class="container1">
+      <h1>Welcome to Pc control</h1>
+      <p>Register once, store them for all the time</p>
     </div>
+    </section>
+    <section class="login-section">
+    <div class="container">
+      <h2>Login to Access Your Account</h2>
+      <div class="login-form">
+        <form id="login-form">
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+        <button type="submit" class="btn">Login</button>
+      </form>
+      </div>
+    </div>
+  </section>
+  </div>
   </div>
 
   <footer class="footer">
@@ -68,14 +66,6 @@
           <h3>Support</h3>
           <ul>
             <li><a href="#">Support Home Page</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
-        </div>
-        <div class="column">
-          <h3>Company Info</h3>
-          <ul>
-            <li><a href="About.html">About Us</a></li>
-            
           </ul>
         </div>
         <div class="column">
