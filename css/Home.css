@@ -103,6 +103,7 @@
   backdrop-filter: blur(10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   color: #fff;
+  background-color: rgba(35, 33, 33, 0.5);
 }
 
 .form-group {
